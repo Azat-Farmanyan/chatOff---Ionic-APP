@@ -1,0 +1,46 @@
+<div class="login">
+    <div class="wrapper">
+        <div class="login-body" [style.justify-content]="justifyContent">
+            <div class="logo-block">
+                <img src="../../assets/icon/chatoff-logo.svg" alt="chatoff" class="page-logo">
+                <h2 class="logo-title">CHATOFF</h2>
+            </div>
+            <form class="input-form">
+                <h3 class="big-title">{{'login' | uppercase}}</h3>
+
+                <div class="input-block">
+                    <div class="input-item">
+                        <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="email"
+                            class="big-input" placeholder="Email">
+                        <img class="input-icon" src="../../../assets/icon/Letter.svg" alt="email">
+                    </div>
+                    <div class="input-item">
+                        <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text"
+                            class="big-input" placeholder="Password">
+                        <img class="input-icon" src="../../../assets/icon/Private Lock.svg" alt="password">
+                    </div>
+
+                </div>
+                <div class="login-btns">
+
+                    <button class="big-btn green-bg">
+                        Input
+                    </button>
+
+                    <div class="radio-btn" (click)="setRememberMe()">
+                        <div class="radio-check">
+
+                            <img [style.visibility]="rememberMe ? 'visible' : 'hidden'"
+                                src="../../../assets/icon/radio-active.svg" alt="active">
+
+                        </div>
+                        <p>Remember me</p>
+                    </div>
+                    <p style="text-align: center">Don’t have an account?
+                        <span [routerLink]="['/signup']" style="text-decoration-line: underline;">Sign Up</span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
