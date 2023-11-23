@@ -1,8 +1,6 @@
-# chatOff_Ionic-APP
-
 # ChatOff
 
-ChatOff is an Ionic app that provides a simple and intuitive platform for users to register, sign in, and engage in real-time chat conversations with each other.
+ChatOff is an Ionic app that provides a simple and intuitive platform for users to register, sign in, and engage in real-time chat conversations with each other. The app is designed for both Android and iOS users.
 
 ## Features
 
