@@ -5,27 +5,47 @@
             <h2 class="logo-title">CHATOFF</h2>
         </div>
 
-        <form class="input-form" [ngStyle]="{ 'padding-bottom': inputSelected ? marginBottomVh + 'vh' : '0' }">
+        <form class="input-form" [ngStyle]="{ 'padding-bottom': inputSelected ? marginBottomVh + 'vh' : '0' }"
+            [formGroup]="form" (ngSubmit)="submit()">
 
             <h3 class="big-title">{{'login' | uppercase}}</h3>
 
             <div class="input-block">
                 <div id="email" class="input-item">
-                    <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="email"
-                        class="big-input" placeholder="Email">
+                    <input formControlName="email" (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)"
+                        type="email" class="big-input" placeholder="Email">
                     <img class="input-icon" src="../../../assets/icon/Letter.svg" alt="email">
+                    <p class="error-block"
+                        *ngIf="form.get('email')?.errors?.['required'] && (form.get('email')?.dirty || form.get('email')?.touched)">
+                        * Email is required
+                    </p>
+
+                    <p class="error-block"
+                        *ngIf="form.get('email')?.errors?.['email'] && (form.get('email')?.dirty || form.get('email')?.touched)">
+                        * Enter a valid email address
+                    </p>
                 </div>
                 <div id="password" class="input-item">
-                    <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text" class="big-input"
-                        placeholder="Password">
+                    <input formControlName="password" (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)"
+                        type="text" class="big-input" placeholder="Password">
                     <img class="input-icon" src="../../../assets/icon/Private Lock.svg" alt="password">
+                    <p class="error-block"
+                        *ngIf="form.get('password')?.errors?.['required'] && (form.get('password')?.dirty || form.get('password')?.touched)">
+                        * Password is required
+                    </p>
+
+                    <p class="error-block"
+                        *ngIf="form.get('password')?.errors?.['minlength'] && (form.get('password')?.dirty || form.get('password')?.touched)">
+                        * Password must be at least 8 characters long
+                    </p>
                 </div>
 
             </div>
             <div class="login-btns">
 
                 <button class="big-btn green-bg">
-                    Input
+                    {{'input' | titlecase}}
+
                 </button>
 
                 <div class="radio-btn" (click)="setRememberMe()">

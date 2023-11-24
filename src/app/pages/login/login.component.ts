@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,8 +18,20 @@ export class LoginComponent implements OnInit {
 
   constructor(private el: ElementRef) {}
 
+  form: FormGroup;
+
   ngOnInit(): void {
-    console.log('Login page');
+    this.form = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(8),
+      ]),
+    });
+  }
+  submit() {
+    console.log(this.form.value);
+    this.form.reset();
   }
 
   setRememberMe() {

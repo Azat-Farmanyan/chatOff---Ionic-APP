@@ -89,10 +89,8 @@ body {
       position: relative;
       .input-icon {
         position: absolute;
-        right: 0;
-        top: 50%;
-
-        transform: translate(-50%, -50%);
+        right: 16px;
+        top: 16px;
       }
     }
   }
@@ -130,4 +128,13 @@ body {
 }
 .m-bottom {
   padding-bottom: 50vh;
+}
+.error-block {
+  color: #fff;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
