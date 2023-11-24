@@ -21,16 +21,17 @@
     );
   }
   .login-body {
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    // justify-content: space-between;
-    // justify-content: flex-start;
+    z-index: 5;
 
-    height: 80dvh;
+    padding: 10px 27px;
+    height: 100vh;
+    overflow-y: auto;
     .logo-block {
       display: flex;
       align-items: center;

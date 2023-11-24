@@ -9,7 +9,9 @@ import { CommonModule } from '@angular/common';
 export class SignupComponent {
   justifyContent = 'space-between';
 
-  setMarginBottom(shouldSetMargin: boolean) {
-    this.justifyContent = shouldSetMargin ? 'flex-start' : 'space-between';
+  inputSelected: boolean = false;
+  marginBottomVh: number = 70;
+  setMarginBottom(onFucus: boolean) {
+    onFucus ? (this.inputSelected = true) : (this.inputSelected = false);
   }
 }

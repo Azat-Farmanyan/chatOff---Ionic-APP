@@ -72,19 +72,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "12871950608970503623"
+        "hash": "3239732732861008555"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "6143481374187863117"
+        "hash": "1688151402382086373"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "5321815713965520369"
+        "hash": "929513788784630640"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "17015872959404201712"
+        "hash": "2279677175741134467"
       },
       {
         "file": ".vscode/extensions.json",
@@ -93,6 +93,10 @@
       {
         "file": ".vscode/settings.json",
         "hash": "1151538777131426085"
+      },
+      {
+        "file": "README.md",
+        "hash": "12313375456628716797"
       },
       {
         "file": "android/.gitignore",
@@ -388,11 +392,11 @@
       },
       {
         "file": "src/app/pages/login/login.component.html",
-        "hash": "9432013046600804642"
+        "hash": "7121953502399307228"
       },
       {
         "file": "src/app/pages/login/login.component.scss",
-        "hash": "13103348316719963202"
+        "hash": "10528201783952062070"
       },
       {
         "file": "src/app/pages/login/login.component.spec.ts",
@@ -400,7 +404,7 @@
       },
       {
         "file": "src/app/pages/login/login.component.ts",
-        "hash": "14356777807751406303"
+        "hash": "13585936131329358989"
       },
       {
         "file": "src/app/pages/login/login.module.ts",
@@ -412,11 +416,11 @@
       },
       {
         "file": "src/app/pages/signup/signup.component.html",
-        "hash": "3265561195523368100"
+        "hash": "6981624260763245314"
       },
       {
         "file": "src/app/pages/signup/signup.component.scss",
-        "hash": "11248559344252640199"
+        "hash": "626311977959788393"
       },
       {
         "file": "src/app/pages/signup/signup.component.spec.ts",
@@ -424,7 +428,7 @@
       },
       {
         "file": "src/app/pages/signup/signup.component.ts",
-        "hash": "7580611538212660530"
+        "hash": "9726611205735748737"
       },
       {
         "file": "src/app/pages/signup/signup.module.ts",
@@ -441,6 +445,10 @@
       {
         "file": "src/assets/icon/Private Lock.svg",
         "hash": "7309799934664425177"
+      },
+      {
+        "file": "src/assets/icon/User.svg",
+        "hash": "17329133788417078362"
       },
       {
         "file": "src/assets/icon/chatoff-logo.svg",
@@ -472,7 +480,7 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "13604367681467907591"
+        "hash": "12684781727802203705"
       },
       {
         "file": "src/index.html",

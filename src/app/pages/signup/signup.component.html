@@ -1,44 +1,42 @@
 <div class="signup">
-    <div class="wrapper">
-        <div class="signup-body" [style.justify-content]="justifyContent">
-            <div class="logo-block">
-                <img src="../../assets/icon/chatoff-logo.svg" alt="chatoff" class="page-logo">
-                <h2 class="logo-title">CHATOFF</h2>
-            </div>
-            <form class="input-form">
-                <h3 class="big-title">{{'signup' | uppercase}}</h3>
-
-                <div class="input-block">
-                    <div class="input-item">
-                        <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text"
-                            class="big-input" placeholder="Name">
-                        <img class="input-icon" src="../../../assets/icon/User.svg" alt="email">
-                    </div>
-                    <div class="input-item">
-                        <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="email"
-                            class="big-input" placeholder="Email">
-                        <img class="input-icon" src="../../../assets/icon/Letter.svg" alt="email">
-                    </div>
-                    <div class="input-item">
-                        <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text"
-                            class="big-input" placeholder="Password">
-                        <img class="input-icon" src="../../../assets/icon/Private Lock.svg" alt="password">
-                    </div>
-
-                </div>
-                <div class="signup-btns">
-
-                    <button class="big-btn yellow-bg">
-                        Input
-                    </button>
-
-
-                    <p style="text-align: center">
-                        <span [routerLink]="['/login']" style="text-decoration-line: underline;">I’m already a
-                            member</span>
-                    </p>
-                </div>
-            </form>
+    <div class="signup-body">
+        <div class="logo-block">
+            <img src="../../assets/icon/chatoff-logo.svg" alt="chatoff" class="page-logo">
+            <h2 class="logo-title">CHATOFF</h2>
         </div>
+        <form class="input-form" [ngStyle]="{ 'padding-bottom': inputSelected ? marginBottomVh + 'vh' : '0' }">
+            <h3 class="big-title">{{'signup' | uppercase}}</h3>
+
+            <div class="input-block">
+                <div class="input-item">
+                    <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text" class="big-input"
+                        placeholder="Name">
+                    <img class="input-icon" src="../../../assets/icon/User.svg" alt="email">
+                </div>
+                <div class="input-item">
+                    <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="email"
+                        class="big-input" placeholder="Email">
+                    <img class="input-icon" src="../../../assets/icon/Letter.svg" alt="email">
+                </div>
+                <div class="input-item">
+                    <input (focus)="setMarginBottom(true)" (blur)="setMarginBottom(false)" type="text" class="big-input"
+                        placeholder="Password">
+                    <img class="input-icon" src="../../../assets/icon/Private Lock.svg" alt="password">
+                </div>
+
+            </div>
+            <div class="signup-btns">
+
+                <button class="big-btn yellow-bg">
+                    Input
+                </button>
+
+
+                <p style="text-align: center">
+                    <span [routerLink]="['/login']" style="text-decoration-line: underline;">I’m already a
+                        member</span>
+                </p>
+            </div>
+        </form>
     </div>
 </div>

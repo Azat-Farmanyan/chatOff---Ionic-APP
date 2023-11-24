@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +15,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   rememberMe: boolean = false;
 
-  constructor() {}
+  constructor(private el: ElementRef) {}
 
   ngOnInit(): void {
     console.log('Login page');
@@ -18,9 +24,10 @@ export class LoginComponent implements OnInit {
   setRememberMe() {
     this.rememberMe = !this.rememberMe;
   }
-  justifyContent = 'space-between';
 
-  setMarginBottom(shouldSetMargin: boolean) {
-    this.justifyContent = shouldSetMargin ? 'flex-start' : 'space-between';
+  inputSelected: boolean = false;
+  marginBottomVh: number = 70;
+  setMarginBottom(onFucus: boolean) {
+    onFucus ? (this.inputSelected = true) : (this.inputSelected = false);
   }
 }
